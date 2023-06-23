@@ -1,0 +1,82 @@
+.paymentdetails {
+  width: 100%;
+
+  &_header {
+    margin: 4rem 0;
+    position: relative;
+
+    @include flex(row, space-between, center);
+  }
+
+  &_status {
+    @include flex(row, flex-start, center);
+    gap: 1rem;
+
+    span {
+      color: #cc9600;
+      font-size: 1rem;
+      background-color: #fffade;
+      border: 2px solid #ffffff;
+      border-radius: 150px;
+      padding: 0 0.7rem;
+      font-weight: bold;
+    }
+  }
+
+  &_ctas {
+    @include flex(row, space-between, center);
+    margin-left: 1rem;
+    button {
+      &:not(:last-of-type) {
+        margin-right: 1.5rem;
+      }
+      @include flex(row, initial, center);
+      p {
+        margin-left: 0.5rem;
+      }
+    }
+
+    &-reveal {
+      display: flex !important;
+    }
+
+    @media screen and (max-width: 500px) {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 40px;
+      background: #ffffff;
+      justify-content: initial;
+      box-shadow: 0px 1px 10px rgba(120, 118, 118, 0.15);
+      border-radius: 5px;
+      padding: 1rem 0 0 0;
+      width: 150px;
+      margin-left: 0 !important;
+      button {
+        width: 100%;
+        margin-right: 0 !important;
+        padding: 0.7rem;
+        display: flex;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid #e5e9f2;
+          margin-bottom: 1rem;
+        }
+        svg {
+          flex-basis: 30%;
+        }
+      }
+    }
+  }
+
+  &_actions {
+    display: none;
+    // row
+
+    @media (max-width: 500px) {
+      display: block;
+
+    }
+  }
+}

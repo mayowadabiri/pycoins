@@ -1,0 +1,7 @@
+.business{
+    .indicator{
+        &_item:not(:last-child){
+            flex-basis: 50%;
+        }
+    }
+}

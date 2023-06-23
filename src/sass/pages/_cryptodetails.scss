@@ -1,0 +1,46 @@
+.cryptodetails {
+  &_name {
+    margin-top: 4rem;
+    @include flex(row, initial, center);
+  }
+
+  p {
+    font-weight: 700 !important;
+  }
+
+  &_btns {
+    margin-top: 3rem;
+    width: 400px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    button {
+      // flex-shrink: 1;
+      @include flex(row, center, center);
+      span {
+        margin-left: 1rem;
+      }
+    }
+
+    button:not(:last-of-type) {
+      margin-right: 2rem;
+    }
+    button:last-of-type {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &_buttons {
+    @include flex(row, initial, center);
+    margin-bottom: 2rem;
+
+    button {
+      margin-right: 2rem;
+      margin-left: 0 !important;
+      // transition: background-color 0.3s ease-in;
+    }
+  }
+}

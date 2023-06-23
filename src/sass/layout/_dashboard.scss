@@ -1,0 +1,16 @@
+.dashboard {
+
+  &_content {
+    margin-left: 350px;
+
+    @include respond(tab-land){
+      margin-left: 250px
+    }
+
+    @include respond(tab-port){
+      margin-left: 0;
+      @include flex(column, initial, initial)
+
+    }
+  }
+}

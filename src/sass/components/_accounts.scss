@@ -1,0 +1,54 @@
+.accounts {
+  font-family: $font-family;
+  &_container {
+    padding-top: 2rem;
+  }
+
+  &_list {
+    margin-top: 1rem;
+    @include flex(column, initial, initial);
+  }
+
+  &_item {
+    @include flex(row, initial, center);
+    margin-bottom: 1rem;
+    @include border(#e5e9f2);
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+    p {
+      margin-right: auto;
+      font-size: 1rem;
+      line-height: 28px;
+
+      color: #30324B;
+    }
+  }
+
+  &_content {
+    margin-right: auto;
+    @include flex(column, center, initial);
+  }
+
+  &_img {
+    margin-right: 1rem;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    @include flex(row, center, center);
+
+    &-1 {
+      background-color: rgba($color-sidebar, 0.2);
+    }
+
+    &-2 {
+      background-color: rgba($color-bitcoin, 0.2);
+    }
+    &-3 {
+      background-color: rgba($color-ethereum, 0.2);
+    }
+    &-4 {
+      background-color: rgba($color-tether, 0.2);
+    }
+  }
+}

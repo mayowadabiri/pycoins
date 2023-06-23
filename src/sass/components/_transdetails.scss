@@ -1,0 +1,42 @@
+.transdetails {
+  width: 100%;
+
+  &_box {
+    margin-top: 2rem;
+  }
+
+  &_item {
+    @include flex(row, space-between, center);
+    padding: 1.2rem 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #e5e9f2;
+    }
+
+    p:first-of-type {
+      font-weight: 600 !important;
+      margin-right: 1rem;
+    }
+  }
+
+  .status {
+    padding: 0.2rem 0.5rem;
+    @include flex(row, center, center);
+    border-radius: 100px;
+    text-transform: capitalize;
+  }
+  p[type="confirmed"],
+  p[type="successful"] {
+    color: $color-success;
+    background-color: $bg-color-success;
+  }
+
+  p[type="declined"] {
+    color: $color-failed;
+    background-color: $bg-color-failed;
+  }
+  p[type="pending"] {
+    color: $color-pending;
+    background-color: $bg-color-pending;
+  }
+}

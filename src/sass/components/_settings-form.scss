@@ -1,0 +1,55 @@
+.settingsform {
+  margin-top: 4rem;
+  @include flex(column, flex-start, initial);
+
+  &-group {
+    @include flex(row, flex-start, center);
+    // position: relative;
+    @media (max-width: 450px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    margin-bottom: 2rem;
+    label {
+      font-weight: 600 !important;
+      flex-basis: 200px;
+      // width: 250px;
+      @media (max-width: 450px) {
+        flex-basis: 0;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .fund_wallet {
+      flex-grow: 1 !important;
+    }
+  }
+
+  &-input {
+    flex-grow: 1;
+    position: relative;
+
+    @media screen and (max-width: 450px) {
+      width: 100%;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+
+  .button {
+    align-self: flex-end !important;
+    width: max-content;
+    padding: 1rem !important;
+
+    @media (max-width: 485px) {
+      align-self: initial !important;
+      width: 100%;
+    }
+  }
+}

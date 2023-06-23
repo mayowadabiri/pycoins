@@ -1,0 +1,43 @@
+.background {
+  width: 100%;
+  min-height: 100vh;
+
+  &_container {
+    @include flex(column, space-between, initial);
+    min-height: 100vh;
+    height: 100%;
+    position: relative;
+  }
+
+  &_bgcolor {
+    flex-basis: 400px;
+    background-color: #fafafa;
+
+    @include respond(tab-port) {
+      background-color: transparent;
+    }
+  }
+  &_ext {
+    flex-grow: 2;
+    background-color: $color-white;
+  }
+
+  &_box {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 700px;
+    max-width: 90%;
+    margin: auto;
+    // box-shadow: 0px 1px 10px rgba(72, 209, 137, 0.1);
+    @include flex(column, initial, initial);
+  }
+
+  &_content {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  &_img {
+    align-self: center;
+  }
+}

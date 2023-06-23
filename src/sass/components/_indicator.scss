@@ -1,0 +1,66 @@
+.indicator {
+  //   background-color: red;
+  height: auto;
+
+  width: 85%;
+  margin: 3rem auto;
+  @include flex(row, space-between, center);
+
+  &_content {
+    gap: 1rem;
+
+    p {
+      margin-left: -35px;
+    }
+
+    &:not(:last-child) {
+      flex-grow: 2;
+      @include flex(column, initial, initial);
+    }
+  }
+
+  &_item {
+    @include flex(row, flex-start, center);
+
+    &:not(:last-child) {
+    }
+
+    &:first-child span:first-of-type span {
+      background-color: $primary-color;
+    }
+
+    &-circle {
+      background: $color-white;
+      box-shadow: $box-shaodow-1;
+      width: 2.5rem;
+      height: 2.5rem;
+      @include flex(row, center, center);
+      border-radius: 50%;
+      position: relative;
+
+      span {
+        height: 1.25rem;
+        width: 1.25rem;
+        border-radius: 50%;
+        display: block;
+        transition: all 0.1s ease-out;
+      }
+    }
+
+    &-line {
+      height: 10px;
+      flex-grow: 1;
+      background: $color-white;
+
+      box-shadow: $box-shaodow-1;
+
+      position: relative;
+      span {
+        height: 100%;
+        display: block;
+        width: 0;
+        transition: all 0.5s ease-out;
+      }
+    }
+  }
+}

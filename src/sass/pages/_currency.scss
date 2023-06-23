@@ -1,0 +1,26 @@
+.currency {
+  position: relative;
+
+  &_items {
+    @include flex(column, flex-start, initial);
+  }
+
+  &_item {
+    margin-bottom: 2rem;
+
+    @include flex(row, flex-start, center);
+
+    p {
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.5rem;
+      line-height: 30px;
+      color: #333333;
+      flex-basis: 300px;
+    }
+    label {
+      margin-right: 2rem;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.main {
+  margin-top: 76px;
+  width: 100%;
+  min-height: calc(100vh - 76px);
+
+  @include respond(tab-port) {
+    margin-top: 8rem;
+  }
+
+  &_container {
+    margin-left: 2rem;
+    margin-right: 50px;
+    padding: 2rem 0 5rem 0;
+
+    @include respond(tab-port) {
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+}

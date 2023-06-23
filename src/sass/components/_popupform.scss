@@ -1,0 +1,13 @@
+.popupform {
+  .form_group {
+    // padding-top: 2rem;
+    margin-bottom: 10px !important;
+  }
+
+  svg {
+  }
+  &_back {
+    cursor: pointer;
+    position: absolute;
+  }
+}

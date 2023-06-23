@@ -1,0 +1,46 @@
+.pagination {
+  @include flex(row, space-between, center);
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #787676;
+  font-size: 1.1rem;
+  font-family: $font-family;
+  font-style: normal;
+  line-height: 1.875rem;
+
+  p:first-of-type {
+    margin-right: 0.5rem;
+  }
+  p:last-of-type {
+    margin-left: 3rem;
+  }
+
+  &_img {
+    margin-left: 3rem;
+    @include flex(row, space-between, center);
+
+    button:disabled {
+      cursor: not-allowed;
+    }
+
+    button:last-of-type {
+      margin-left: 3rem;
+    }
+  }
+
+  select {
+    border: none !important;
+    font-family: $font-family;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #787676;
+    line-height: 1.875rem;
+    background-color: transparent;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 65px;
+    &:focus {
+      outline: none;
+    }
+  }
+}

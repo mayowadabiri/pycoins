@@ -1,0 +1,26 @@
+.Toastify__toast {
+  padding: 20px;
+}
+
+.Toastify__toast-body {
+  font-size: 1rem !important;
+  font-family: $font-family !important;
+}
+
+.Toastify__toast--success {
+  background-color: $primary-color !important;
+  color: #fff !important;
+}
+.Toastify__toast--info {
+  background-color: #444854 !important;
+  color: #fff !important;
+}
+
+.Toastify__toast--error {
+  background-color: #f44336 !important;
+  color: #fff !important;
+
+  svg {
+    fill: #fff !important;
+  }
+}

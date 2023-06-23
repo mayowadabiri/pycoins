@@ -1,0 +1,64 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+  font-size: 16px;
+  font-family: $font-family;
+
+  @include respond(tab-land) {
+    font-size: 15px;
+  }
+  @include respond(tab-port) {
+    font-size: 14px;
+  }
+  @include respond(phone) {
+    font-size: 11px;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: $font-family;
+  background-color: $color-white;
+  position: relative;
+}
+// body.modal {
+//   overflow: hidden;
+//   position: fixed;
+// }
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.verified {
+  @include flex(row, initial, center);
+  font-weight: 600;
+  span {
+    margin-right: 0.5rem;
+  }
+}
+
+input::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+input::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+input::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+  color: transparent !important;
+}
+input[type="date"]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+input[type="date"]:focus::-webkit-datetime-edit {
+  color: black !important;
+}

@@ -1,0 +1,40 @@
+.label {
+  &_input {
+    display: none;
+
+    &:checked ~ label > span:after {
+      opacity: 1;
+    }
+  }
+  &_label {
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    @include flex(row, initial, center);
+    @include line;
+    span {
+      height: 1.75rem;
+      width: 1.75rem;
+      border-radius: 50%;
+      @include border(#e5e9f2);
+      margin-right: 1rem;
+      position: relative;
+
+      &:after {
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 50%;
+        position: absolute;
+        background-color: $primary-color;
+        content: "";
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        display: block;
+        // transform: translate(-50%);
+      }
+    }
+    // p {
+    //   color: #52575c;
+    //   font-size: 1rem;
+    // }
+  }
+}

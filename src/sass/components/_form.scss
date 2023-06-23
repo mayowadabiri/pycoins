@@ -1,0 +1,86 @@
+.form {
+  width: 100%;
+
+  &_group {
+    width: 100%;
+
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  &_input,
+  &_textarea,
+  &_upload-label {
+    display: block;
+    width: 100%;
+    font-size: 1.1rem;
+    @include line;
+    // padding: 1rem !important;
+    font-family: $font-family;
+    color: #30324b;
+    &::placeholder {
+      color: #30324b !important;
+      font-family: $font-family !important;
+    }
+
+    &:focus {
+      border: 1px solid $primary-color;
+      outline: none;
+    }
+
+    &:read-only {
+      background-color: #f5f5f5;
+      cursor: not-allowed;
+    }
+  }
+
+  &_select {
+    background-color: transparent;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    -ms-appearance: none !important;
+    -o-appearance: none !important;
+    appearance: none !important;
+    background-position-x: 98% !important;
+    background-repeat: no-repeat;
+    background-position-y: 50% !important;
+    background-image: url("data:image/svg+xml,%3Csvg width='34' height='24' viewBox='0 0 34 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.7114 16.0972L8.98758 10.4488L11.3079 8.75198L16.7114 12.7036L22.115 8.75198L24.4353 10.4488L16.7114 16.0972ZM16.7114 2.40039C9.4618 2.40039 3.58398 6.69759 3.58398 12.0004C3.58398 17.302 9.4618 21.6004 16.7114 21.6004C23.9611 21.6004 29.8389 17.302 29.8389 12.0004C29.8389 6.69759 23.9611 2.40039 16.7114 2.40039Z' fill='%23C0CCDA'/%3E%3Cmask id='mask0' mask-type='alpha' maskUnits='userSpaceOnUse' x='3' y='2' width='27' height='20'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.7114 16.0972L8.98758 10.4488L11.3079 8.75198L16.7114 12.7036L22.115 8.75198L24.4353 10.4488L16.7114 16.0972ZM16.7114 2.40039C9.4618 2.40039 3.58398 6.69759 3.58398 12.0004C3.58398 17.302 9.4618 21.6004 16.7114 21.6004C23.9611 21.6004 29.8389 17.302 29.8389 12.0004C29.8389 6.69759 23.9611 2.40039 16.7114 2.40039Z' fill='white'/%3E%3C/mask%3E%3Cg mask='url(%23mask0)'%3E%3C/g%3E%3C/svg%3E%0A");
+    option {
+      font-size: 1.2rem;
+      font-family: $font-family;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    & * {
+      border: 1px solid red;
+    }
+  }
+
+  &_textarea {
+    resize: none;
+  }
+  &_img {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 100;
+  }
+
+  &_upload {
+    &-input {
+      display: none;
+    }
+
+    &-label {
+      // margin-bottom: 2rem;
+      cursor: pointer;
+      @include flex(row, space-between, center);
+    }
+  }
+  &_error {
+    border: 1px solid red !important;
+  }
+}

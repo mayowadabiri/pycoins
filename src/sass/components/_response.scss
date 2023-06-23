@@ -1,0 +1,10 @@
+.response{
+    @include flex(column, initial, center);
+    padding-top: 6rem;
+    padding-bottom: 1rem;
+
+    
+    // & *{
+    //     margin-bottom: 1.5rem;;
+    // }
+}

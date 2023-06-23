@@ -1,0 +1,47 @@
+.button {
+  padding: 1rem 0;
+  width: 100%;
+  border: none;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: $font-family;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  @include flex(row, center, center);
+  transition: all 0.2s ease-in-out;
+
+  &_white {
+    background-color: $color-white;
+    @include border($primary-color);
+    color: $primary-color;
+  }
+
+  &_primary {
+    color: $color-white;
+    background-color: $primary-color;
+  }
+
+  &_grey {
+    border: 1px solid #e5e9f2;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: $primary-color;
+  }
+
+  &_remove {
+    background-color: #eb5757;
+    color: white;
+  }
+
+  &:disabled {
+    // cursor: not-allowed !important;
+    background-color: #ccc !important;
+    cursor: initial;
+    // background-color: rgba(255, 255, 255, 0.7)
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

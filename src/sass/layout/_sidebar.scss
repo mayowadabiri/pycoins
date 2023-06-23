@@ -1,0 +1,86 @@
+.sidebar {
+  position: fixed;
+  width: 350px;
+  // height: 100vh;
+  background-color: $bg-color;
+  font-family: $font-family;
+  padding: 2rem 4rem 0 4rem;
+  bottom: 0;
+  top: 0;
+
+  @include respond(tab-land) {
+    width: 250px;
+  }
+  @include respond(tab-port) {
+    display: none;
+    // position: relative;
+    // z-index: 1000;
+    // height: 100vh
+  }
+
+  &_container {
+    height: 100%;
+    @include flex(column, flex-start, initial);
+    // background-color:red;
+    padding-bottom: 10rem;
+  }
+
+  &_name {
+    margin: 2.5rem 0;
+    background-color: $color-white;
+    padding: 1.5rem 0.7rem;
+    @include border(#e5e9f2);
+    border-radius: 5px;
+
+    h5 {
+      color: #1d1e2c;
+      font-size: 1rem;
+      font-weight: auto;
+      line-height: 1.2rem;
+      margin-bottom: 1rem;
+      text-transform: capitalize;
+    }
+
+    P {
+      font-size: 12px;
+      line-height: 16px;
+      color: $color-sidebar;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  }
+
+  &_footer {
+    padding-top: 2rem;
+    width: max-content;
+    background-color: transparent;
+    border: none;
+    @include flex(row, initial, center);
+    cursor: pointer;
+
+    span {
+      margin-left: 1rem;
+    }
+  }
+
+  &_show {
+    display: block !important;
+    width: 80% !important;
+    z-index: 1000 !important;
+    height: 100vh !important;
+    animation: slideright 0.7s ease-in-out;
+  }
+}
+
+/*media query mobile*/
+// @media only screen and (max-width: 500px) {
+//   .sidebar {
+//     display: none;
+//   }
+// }
+
+// @media only screen and (max-width: 360px) {
+//   .header_container {
+//     display: none;
+//   }
+// }

@@ -1,0 +1,80 @@
+.home {
+  width: 100%;
+  position: relative;
+  &_container {
+    @include flex(row, space-between, center);
+    @media (max-width: 500px) {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &_name {
+    @include flex(column, space-between, initial);
+    margin-right: 2rem;
+    @media screen and(max-width: 500px) {
+      margin-bottom: 2rem;
+      // align-items: center;
+      // text-align: center;
+    }
+    h3 {
+      text-transform: capitalize;
+    }
+  }
+  &_link {
+    @include flex(row, initial, center);
+  }
+
+  &_switch {
+    @include flex(row, flex-start, center);
+    @include border(#e5e9f2);
+    align-self: stretch;
+    border-radius: 10px;
+    padding: 1.5rem;
+    cursor: pointer;
+
+    img {
+      margin-right: 1rem;
+    }
+  }
+
+  &_wallets {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    @include flex(row, space-between, center);
+
+    span {
+      margin-right: 1rem;
+    }
+  }
+
+  &_empty {
+    margin-top: 5rem;
+  }
+
+  &_businessForm {
+    width: 100%;
+    h3 {
+      text-align: left !important;
+    }
+  }
+  &_table {
+    @include flex(column, space-between, flex-end);
+
+    @media (max-width: 500px){
+      display: block !important;
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .home {
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .home {
+    padding-top: 2.5rem;
+  }
+}

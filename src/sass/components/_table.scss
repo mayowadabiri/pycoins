@@ -1,0 +1,81 @@
+.table {
+  width: 100%;
+
+  thead {
+    text-align: left;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid #e5e9f2;
+    padding: 1em 0;
+  }
+
+  th {
+    font-size: 0.75rem;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+    color: #787676;
+    font-family: $font-family;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  td {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 18px;
+    color: $color-sidebar;
+    @include respond(phone) {
+      // font-size: ;
+    }
+    // text-align: center;
+  }
+
+  tbody tr {
+    cursor: pointer;
+  }
+
+  tbody tr td:first-of-type {
+    // @include flex(row, flex-start, center);
+
+    span:first-of-type {
+      @include span;
+      img {
+        @include img;
+      }
+    }
+    span {
+      vertical-align: middle;
+    }
+  }
+
+  tbody tr td:last-of-type {
+    vertical-align: middle;
+    font-weight: normal !important;
+
+    span {
+      display: inline-block !important;
+      padding: 0.2rem 0.5rem;
+      border-radius: 100px;
+      font-size: 15px;
+      border: 2px solid #ffffff;
+      text-transform: capitalize;
+    }
+  }
+
+  .failed {
+    color: $color-failed;
+    background-color: $bg-color-failed;
+  }
+  .pending {
+    color: $color-pending;
+    background-color: $bg-color-pending;
+  }
+  .success {
+    color: $color-success;
+    background-color: $bg-color-success;
+  }
+}

@@ -1,0 +1,76 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: calc(100vw - 350px);
+  background-color: $color-white;
+  border-bottom: 3px solid #f8f8f8;
+
+  @include respond(tab-land) {
+    width: calc(100vw - 250px);
+  }
+
+  @include respond(tab-port) {
+    // position: relative;
+    width: 100%;
+    box-shadow: 0px 1px 10px rgba(120, 118, 118, 0.15);
+    z-index: 10;
+  }
+
+  &_container {
+    padding: 1.5rem;
+  }
+
+  &_desktop {
+    @include flex(row, flex-end, center);
+    & *:not(label) {
+      margin-right: 32px;
+    }
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &_mobile {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    @include respond(tab-port) {
+      display: flex;
+    }
+
+    &-env {
+      @include flex(row, center, center);
+      *:not(label) {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &_name {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #444854;
+    text-transform: uppercase;
+    @include flex(row, center, center);
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: $font-family;
+    margin-right: 20px;
+    margin-left: 30px;
+    &_container {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &_test {
+    color: #eb4335;
+  }
+
+  &_live {
+    color: $primary-color;
+  }
+}

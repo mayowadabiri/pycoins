@@ -1,0 +1,24 @@
+.settlement {
+  padding: 6rem 5rem 4rem;
+  @include flex(column, initial, center);
+
+  @include respond(phone) {
+    padding: 3rem 
+  }
+
+  h3,
+  p {
+    width: 80%;
+  }
+
+  p {
+    font-size: 1.1rem !important;
+  }
+
+  button {
+    width: 80% !important;
+    img {
+      margin-right: 1rem;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.warning {
+  position: fixed !important;
+  background-color: #eb5757;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  left: 0;
+  top: 0 !important;
+
+  p {
+    color: #fff !important;
+    font-weight: bold !important;
+    font-size: 1.1rem;
+  }
+}

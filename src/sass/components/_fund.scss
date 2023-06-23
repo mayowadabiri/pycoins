@@ -1,0 +1,42 @@
+.fund {
+  @include flex(column, initial, stretch);
+  margin-top: 3rem;
+
+  &_img {
+    align-self: center;
+    margin-bottom: 3rem;
+    @include border(#e5e9f2);
+    padding: 0.5rem;
+  }
+
+  &_wallet {
+    @include line;
+    @include flex(row, space-between, center);
+    padding: 1rem !important;
+
+    position: relative;
+    display: flex;
+
+    &-text {
+      width: 300px;
+      flex-grow: 2;
+      margin-right: 3rem;
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+    }
+    &-svg {
+      position: absolute;
+      right: 20px;
+      flex-grow: 1;
+      cursor: pointer;
+    }
+  }
+
+  &_details {
+    @include flex(row, space-between, center);
+  }
+}
